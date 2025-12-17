@@ -8,10 +8,10 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'html', 'lcov'],
       reportsDirectory: './tests/coverage',
-      include: ['src/**/*.js'],
+      include: ['src/**/*.js', 'src/**/*.ts'],
       exclude: ['src/lib/**', 'tests/**']
     },
-    include: ['tests/specs/**/*.js'],
-    setupFiles: ['./tests/setup.js']
+    include: ['tests/specs/**/*.js', 'tests/specs/**/*.ts'],
+    setupFiles: ['./tests/setup.ts']
   }
 });
