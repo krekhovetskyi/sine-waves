@@ -70,8 +70,8 @@ describe('sine-waves.js', function() {
           return 100;
         }
       });
-      spyOn(waves.options, 'width').and.returnValue(100);
-      spyOn(waves.options, 'height').and.returnValue(100);
+      vi.spyOn(waves.options, 'width').mockReturnValue(100);
+      vi.spyOn(waves.options, 'height').mockReturnValue(100);
       waves.updateDimensions();
       expect(waves.options.width).toHaveBeenCalled();
       expect(waves.options.height).toHaveBeenCalled();
