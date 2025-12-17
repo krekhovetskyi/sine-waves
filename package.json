@@ -1,6 +1,6 @@
 {
   "name": "sine-waves",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Generate multiple configurable sine waves",
   "homepage": "https://github.com/isuttell/sine-waves",
   "repository": {
@@ -8,6 +8,8 @@
     "url": "git+https://github.com/isuttell/sine-waves.git"
   },
   "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "test": "grunt test"
   },
   "contributors": [
@@ -36,12 +38,14 @@
     "karma-jasmine": "^0.3.0",
     "karma-phantomjs-launcher": "~0.1.4",
     "karma-safari-launcher": "^0.1.1",
-    "karma-story-reporter": "~0.2.2"
+    "karma-story-reporter": "~0.2.2",
+    "typescript": "^5.7.2"
   },
   "bugs": {
     "url": "https://github.com/isuttell/sine-waves/issues"
   },
-  "main": "sine-waves.js",
+  "main": "dist/sine-waves.js",
+  "types": "dist/types/sine-waves.d.ts",
   "directories": {
     "example": "examples",
     "test": "tests"
