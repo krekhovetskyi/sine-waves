@@ -88,13 +88,13 @@ export class SineWaves {
     this.el = this.options.el!;
     delete this.options.el;
     if (!this.el) {
-      throw 'No Canvas Selected';
+      throw new Error('No Canvas Selected');
     }
 
     // Setup the context for reference
     const ctx = this.el.getContext('2d');
     if (!ctx) {
-      throw 'Could not get canvas context';
+      throw new Error('Could not get canvas context');
     }
     this.ctx = ctx;
 
@@ -102,7 +102,7 @@ export class SineWaves {
     this.waves = this.options.waves!;
     delete this.options.waves;
     if (!this.waves || !this.waves.length) {
-      throw 'No waves specified';
+      throw new Error('No waves specified');
     }
 
     // DPI

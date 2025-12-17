@@ -38,7 +38,7 @@ export const Ease: EaseFunctions = {
   },
 
   /**
-   * Easing function to control how string each wave is from
+   * Easing function to control how strong each wave is from
    * left to right
    *
    * @param  {number} percent   where in the line are we?
@@ -51,7 +51,7 @@ export const Ease: EaseFunctions = {
   },
 
   /**
-   * Easing function to control how string each wave is from
+   * Easing function to control how strong each wave is from
    * left to right
    *
    * @param  {number} percent   where in the line are we?
@@ -64,7 +64,7 @@ export const Ease: EaseFunctions = {
   },
 
   /**
-   * Easing function to control how string each wave is from
+   * Easing function to control how strong each wave is from
    * left to right
    *
    * @param  {number} percent   where in the line are we?
