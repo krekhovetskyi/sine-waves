@@ -1,7 +1,10 @@
 // Setup file for Vitest
 // This simulates the original Karma setup where all JS files were concatenated
 import { readFileSync } from 'fs';
-import { join } from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Mock canvas 2d context for tests
 if (typeof HTMLCanvasElement !== 'undefined') {
@@ -61,7 +64,7 @@ if (typeof HTMLCanvasElement !== 'undefined') {
 
 // Helper function to execute scripts in global context
 function loadScript(path) {
-  const code = readFileSync(join(import.meta.dirname, path), 'utf-8');
+  const code = readFileSync(__dirname + '/' + path, 'utf-8');
   // Use eval in global context to make variables global
   globalThis.eval(code);
 }
@@ -77,5 +80,3 @@ loadScript('../src/utilities.js');
 loadScript('../src/ease.js');
 loadScript('../src/waves.js');
 loadScript('../src/sine-waves.js');
-
-
