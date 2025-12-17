@@ -3,13 +3,14 @@
  *
  * ---------------------------------------------------------------
  *
- * The default command starts a karma watch server and then runs any tests
- * when the the main js file changes or any test specs change
+ * The default command starts a flow watch server and then runs any tasks
+ * when the main js file changes or any test specs change
+ *
+ * Note: For test watching, use `npm run test:watch` instead
  *
  */
 module.exports = function(grunt) {
   grunt.registerTask('default', [
-    'karma:watch:start',
     'flow:watch:start',
     'watch'
   ]);
