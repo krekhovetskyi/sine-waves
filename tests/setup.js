@@ -1,5 +1,5 @@
 // Setup file for Vitest
-// This simulates the Karma setup where all JS files are concatenated
+// This simulates the original Karma setup where all JS files were concatenated
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
@@ -70,7 +70,7 @@ function loadScript(path) {
 loadScript('./vendor/jquery.js');
 loadScript('./vendor/lodash.js');
 
-// Load source files in the order specified in karma.conf.js
+// Load source files in the order they were previously specified in karma.conf.js
 loadScript('../src/lib/polyfills.js');
 loadScript('../src/constants.js');
 loadScript('../src/utilities.js');
