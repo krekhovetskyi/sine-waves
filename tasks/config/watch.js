@@ -10,6 +10,8 @@
  * For usage docs see:
  *      https://github.com/gruntjs/grunt-contrib-watch
  *
+ * Note: For test watching, use `npm run test:watch` instead
+ *
  */
 module.exports = function(grunt) {
 
@@ -20,7 +22,7 @@ module.exports = function(grunt) {
 
     src: {
       files: ['src/**/*.js', 'tests/specs/**/*.js'],
-      tasks: ['asciify', 'concat', 'karma:watch:run', 'jshint:src', 'jscs:src', 'flow:watch:status']
+      tasks: ['asciify', 'concat', 'jshint:src', 'jscs:src', 'flow:watch:status']
     },
 
     grunt: {
